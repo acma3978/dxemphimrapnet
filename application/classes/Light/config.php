@@ -1,0 +1,1 @@
+<?php defined('SYSPATH') or die('No direct script access.'); /* * Light Application * @author:     OliverCriss80 <duongtuanx436dev@gmail.com> * @version:    1.0 * @release:    4.10.2016*/class Light_Config {		public static function get($name)	{		return Kohana::$config->load($name);	}}

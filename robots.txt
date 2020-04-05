@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /application/
+Disallow: /data/
+Disallow: /quangcao/
+Disallow: /player/
+Disallow: /js/
+Disallow: /euro/
+Disallow: /theme/

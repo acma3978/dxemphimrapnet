@@ -1,0 +1,22 @@
+# Turn on URL rewriting
+RewriteEngine On
+# Installation directory
+#RewriteBase /
+# Protect application and system files from being viewed
+#RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
+# Allow any files or directories that exist to be displayed directly
+
+RewriteRule ^proxy/(.*)$ player/proxy.php?pingx=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Rewrite all other URLs to index.php/URL
+
+RewriteRule .* index.php?/$0 [PT,L,QSA]
+
+# Don't listing directory
+
+#ErrorDocument 403 http://tronbohd.com/
+ErrorDocument 404     /404.html
+# Follow symbolic links
+

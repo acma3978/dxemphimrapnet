@@ -1,0 +1,273 @@
+/*-------------------- Start Home Carousel ----------------------*/
+
+.top-movie {
+    margin: -10px 0px 15px 0px;
+}
+.carousel_actor .prev, .carousel_actor .next{
+    top: 52px;
+    padding: 20px 10px;
+}
+.carousel-block{
+    position: relative;
+    background: #0A0A0A;
+    border-bottom: 1px solid #6B6A6A;
+    border-top: 1px solid #6B6A6A;
+}
+
+.movie-carousel-top-item {
+    background: #171717;
+    position: relative;
+    border: 1px solid #383838;
+    z-index:1;
+}
+
+.carousel-movie{
+    width: 218px;
+    height: 300px;
+}
+
+.carousel-actor{
+    width: 114px;
+    height: 160px;
+}
+
+@media screen and (max-width: 320px) {
+    .carousel-movie {
+        width: 142.3px;
+        height:215px;
+    }
+}
+@media screen and (width: 360px) {
+    .carousel-movie {
+        width: 162.3px;
+        height:250px;
+    }
+}
+@media screen and (width: 768px) {
+    .carousel-movie {
+        width: 166.3px;
+    }
+}
+@media screen and (width: 375px) {
+    .carousel-movie {
+        width: 170.3px;
+        height:250px;
+    }
+}
+@media screen and (width: 435px) {
+    .carousel-movie {
+        width: 200.3px;
+    }
+}
+@media screen and (width: 414px) {
+    .carousel-movie {
+        width: 189.3px;
+    }
+}
+.movie-carousel-actor-item .carousel-actor-meta{
+    font-size:12px;
+    margin:5px 0;
+    text-transform:capitalize;
+}
+.carousel-actor-meta span{
+    color: #757575;
+    font-weight: 700;
+}
+.movie-carousel-top-item .non-avatar{
+    background-position:-262px -394px;
+    height:160px;
+    width:114px;
+}
+.banner-ads-middle img {
+    width: 100%
+}
+.movie-carousel-top-item-meta i.status {
+    background-color: #ffd800;
+    color: #232323;
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+.movie-carousel-top-item-meta i {
+    font-style: normal;
+    padding: 5px 10px;
+    background: #232323;
+    text-shadow: none!important;
+    font-size: 13px;
+}
+#movie-carousel-actor li{
+    margin-right: 16px;
+}
+#movie-carousel-actor li .carousel-actor{
+    border:0;
+}
+#item-actors #prevTop, #item-actors #nextTop{
+    top:25%;
+}
+.movie-carousel-top-item img {
+    width: 100%;
+    height: 100%;
+}
+.movie-carousel-top-item-meta {
+    position: absolute;
+    width: 97%;
+    bottom: 20px;
+    left: 5px;
+}
+.movie-carousel-top-item-meta span {
+    font-size: 11px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 18px;
+    text-shadow: -1px -1px 0 #181818, 1px -1px 0 #181818, -1px 1px 0 #181818, 1px 1px 0 #181818;
+    display: -webkit-box;
+}
+.movie-carousel-top-item img:hover:before {
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.2) url("../images/slider-img-bg.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.movie-carousel-top-item-meta:hover {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    bottom: 30px;
+    left: 5px;
+    text-transform: none;
+    line-height: 120%;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.movie-carousel-top-item-meta .nameV {
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Roboto', arial, serif;
+    margin-top: 15px;
+}
+.movie-carousel-top-item-meta .nameE {
+    color: #E3B71E;
+    font-size: 12px;
+    font-family: 'Roboto', arial, serif;
+}
+.movie-name-1 {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    color: #FF8040;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 5px 0px;
+}
+.movie-name-2 {
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    text-decoration: none;
+    margin: 5px 0px;
+}
+.movie-carousel-top-item img:hover {
+    opacity: 0.7;
+    width: 100%;
+}
+.movie-carousel-top-item:hover .movie-name-1 {
+    color: #dacb46;
+}
+#movie-carousel-top li {
+    margin-right: 5px;
+}
+#movie-carousel-top li a{
+    z-index:50;
+    display: block;
+}
+.list_carousel {
+    width: 100%;
+    position: relative;
+}
+.list_carousel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.list_carousel li {
+    color: #999;
+    float: left;
+    margin-right: 22px;
+}
+.list_carousel .arrow{
+    height: 20px;
+    width: 10px;
+    display: block;
+}
+.list_carousel .arrow-left{
+    background-position: -2px -182px;
+}
+
+.list_carousel .arrow-right{
+    background-position: -10px -182px;
+}
+.carousel_actor{
+    background: #F1F1F1;
+    padding: 5px;
+}
+.carousel_actor li{
+    color: #999;
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+
+/* .list_carousel li:nth-child(3){
+    margin-right: 0px !important;
+} */
+
+.list_carousel.responsive {
+    width: auto;
+    margin-left: 0;
+}
+.list_carousel .m-block {
+    width: 209px;
+    height: 351px;
+}
+.list_carousel .prev,
+.list_carousel .next {
+    top: 100px;
+    position: absolute;
+    padding: 30px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index:5;
+}
+.list_carousel .next {
+    right: 0px;
+}
+.list_carousel .prev:hover,
+.list_carousel .next:hover {
+    background: rgba(0, 0, 0, 0.9);
+    outline: none;
+    cursor: pointer;
+}
+.list_carousel .prev .arrow-icon.left {
+    height: 24px;
+    width: 16px;
+    display: block;
+    background-position: -7px -7px;
+}
+.list_carousel .next .arrow-icon.right {
+    height: 24px;
+    width: 16px;
+    display: block;
+    background-position: -28px -7px;
+}
+.caroufredsel_wrapper {
+    width: 100% !important;
+}
+/*-------------------- End Home Carousel ----------------------*/

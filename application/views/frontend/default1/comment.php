@@ -1,0 +1,19 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+<!-- BEGIN: comment -->
+<c:if is="$comments">
+<div class="page_nav">
+{$page_nav}
+</div>
+</c:if>
+<c:each from="$comments" value="$comment">
+<div class="comment" data-comment-id="{$comment.comment_id}" data-film-id="{$comment.film_id}">
+    <div class="avatar"><img src="{$comment.avatar_url}" /></div>
+    <div class="detail">
+        <c:if is="{$permission.can_delete}"><div class="delete">x</div></c:if>
+        <div class="username <c:if is="{$comment.user_is_admin}">admin<c:elseif is="{$comment.user_is_mod}">mod<c:elseif is="{$comment.user_is_vip}">vip<c:else /></c:if>">{$comment.user_fullname} <span class="account">({$comment.user_username})</span></div>
+        <div class="message">{$comment.message}</div>
+        <div class="meta">Gửi lúc {$comment.time}</div>
+    </div>
+</div>
+</c:each>
+<!-- END: comment -->
