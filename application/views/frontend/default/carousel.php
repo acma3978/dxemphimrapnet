@@ -1,4 +1,10 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+<!--0.0.0.0 account.jetbrains.com-->
+<!--1.2.3.4 account.jetbrains.com-->
+<!--1.2.3.4 http://www.jetbrains.com-->
+<!--1.2.3.4 www-weighted.jetbrains.com-->
+
 <!-- BEGIN: carousel -->
 <c:if is="$route_name == 'home'">
 <!--   <div class="block-title-top">-->
@@ -11,10 +17,9 @@
 
         <nav id="demo" class="carousel slide f_block_carousel_hot_film row" data-ride="carousel">
 
-
-
             <!-- The slideshow -->
             <div class="carousel-inner no-padding row">
+
                 <div class="carousel-item active">
                     <div class="f_item">
                         <a href="http://google.com" title="Để mai tính">
@@ -234,24 +239,7 @@
 
       <nav class="owl-carousel owl-theme">
 
-             <c:each from="$phim_hot" value="$film">
 
-                 <div class="item" title="{$film.title}">
-                     <span class="label">{$film.status}</span>
-                     <a title="{$film.title}" href="{$film.link}">
-                         <c:if is="{$film.image_url} != NULL">
-                             <img class="img-film" src="{$cache_link_img}{$film.image_url}" title="{$film.title}" alt="{$film.title}">
-                             <c:else />
-                             <img class="img-film" src="{$cache_link_img}{$film.image_url_o}" title="{$film.title}" alt="{$film.title}">
-                         </c:if>
-                         <span class="play-icon"><i class="themeum-moviewplay"></i></span>
-                         <div class="text absolute">
-                             <span class="title" >{$film.title}</span>
-                         </div>
-                     </a>
-                 </div>
-
-             </c:each>
 
       </nav>
 
