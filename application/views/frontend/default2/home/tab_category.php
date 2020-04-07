@@ -1,0 +1,1 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?><!-- BEGIN: tab_category --><!-- END: tab_category -->

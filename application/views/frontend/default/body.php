@@ -1,28 +1,117 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
 <!-- BEGIN: body -->
 <body>
-   <header id="header" class="main-header clear">
-      <div class="nav-menu contaimain-headerner position">
-          <div class="container">
-         <c:if is="$route_name == 'home' || $route_name == 'watch'">
-            <div id="logo"></div>
-            <c:else />
-            <div id="logo"></div>
-         </c:if>
-         <div id="search">
-            <form method="get" action="#">
-               <input type="text" placeholder="Nhập tên phim mà bạn muốn tìm..." class="keyword"
-               <c:if is="{$search_info.keyword}"> value="{$search_info.keyword}"</c:if>
-               >
-               <button type="submit" class="submit"></button>
-            </form>
-         </div>
-         <!--/.search-->
-<!--         <div id="sign">-->
-<!--            <c:include template="sign_panel" />-->
-<!--         </div>-->
-          </div>
-      </div>
+   <div id="header" class="f_main_top_header">
+
+       <div id="f_header">
+           <div class="container">
+
+               <div class="pt-3">
+
+                   <c:if is="$route_name == 'home' || $route_name == 'watch'">
+                       <div id="logo" class="float-left col-md-3 position-relative"><a href="http://google.com" title="Để mai tính" title="Xem phim" id="f_alogo"><i id="f_logo" class="f_icon"></i></a></div>
+                       <c:else />
+                       <div id="logo"></div>
+                   </c:if>
+
+                   <div id="f_search" class="float-left col-md-4">
+
+                       <span class="fa fa-search"></span>
+                       <form class="f_block_search" method="get" action="#">
+                           <input type="text" placeholder="Tìm phim | Diễn viên mà bạn thích..." class="keyword" <c:if is="{$search_info.keyword}"> value="{$search_info.keyword}"</c:if>>
+                           <button type="submit" class="submit"></button>
+                       </form>
+                       <!--<div id="f_search_keyword"><label>Từ khóa: </label><span>Chuyện mai tính, spiderman</span></div>-->
+                   </div>
+
+                   <!--/.search-->
+                   <!--         <div id="sign">-->
+                   <!--            <c:include template="sign_panel" />-->
+                   <!--         </div>-->
+
+                   <div id="f_block_panel" class="float-left col-md-4 pt-1">
+                       <!--<ol class="float-left">-->
+                       <!--<li><a href="#">Video</a></li>-->
+                       <!--<li><a href="#">Tin tức</a></li>-->
+                       <!--</ol>-->
+                       <div class="btn-group ml-3">
+
+                           <button type="button" class="btn btn-secondary"><i class="fas fa-user-circle"></i>Login</button>
+                           <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <span class="sr-only">Toggle Dropdown</span>
+                           </button>
+                           <ul class="dropdown-menu login-box" aria-labelledby="userInfo">
+                               <li class="facebook box-shadow">
+                                   <a rel="nofollow" onclick="javascript:window.location.href='https://xemphimso.tv/api/v1/users/0/FBLogin?state=Lw==&amp;ip=2402:800:63ba:fe45:1963:8083:daa4:62e'" title="Login with facebook" style="color: #fff;cursor: pointer;"><i class="hl-facebook"></i> Login with <span>facebook</span></a>
+                               </li>
+                               <li class="google box-shadow">
+                                   <a rel="nofollow" onclick="javascript:window.location.href='https://xemphimso.tv/api/v1/users/0/GoLogin?state=Lw==&amp;ip=2402:800:63ba:fe45:1963:8083:daa4:62e'" title="Login with google" style="color: #fff;cursor: pointer;"><i class="hl-gplus"></i> Login with <span>google</span></a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+
+                   <div class="clearfix"></div>
+               </div>
+           </div>
+
+       </div>
+
+       <nav id="f_navbar">
+           <div class="container">
+               <ul id="f_navmenu" class="topmenu">
+
+                   <li class="topmenu"><a title="<?php echo Light_Application::APP?>" href="{$url_base}"><img src="./CSS menu creator_files/home1.png" alt="">Trang Chủ</a></li>
+
+                   <li class="topmenu"><a href="https://css3menu.com/neoteric-dark-red.html#"><span><img src="./CSS menu creator_files/info.png" alt="">Thể loại</span></a>
+                       <ul>
+                           <c:each from="$category_cache" value="$category">
+                               <li><a href="{$category.link}" title="Phim {$category.title}"><span><img src="./CSS menu creator_files/hammer(1).png" alt="">Phim lẻ</span>Phim {$category.title}</a></li>
+                           </c:each>
+                       </ul>
+                   </li>
+
+                   <li class="topmenu"><a href="https://css3menu.com/neoteric-dark-red.html#"><span><img src="./CSS menu creator_files/heart.png" alt="">Quốc gia</span></a>
+                       <ul>
+                           <c:each from="$country_cache" value="$country">
+                               <li><a href="{$country.link}" title="Phim {$country.name}"><img src="./CSS menu creator_files/add.png" alt="">Phim {$country.name}</a></li>
+                           </c:each>
+                       </ul>
+                   </li>
+
+                   <li class="topmenu"><a href="https://css3menu.com/neoteric-dark-red.html#"><span><img src="./CSS menu creator_files/heart.png" alt="">Phim lẻ</span></a>
+                       <ul>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/add.png" alt="">Android template</a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/add1.png" alt="">Mac template</a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><span><img src="./CSS menu creator_files/add2.png" alt="">Mercury template</span></a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/add3.png" alt="">Elegant template</a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><span><img src="./CSS menu creator_files/add4.png" alt="">Point template</span></a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/add5.png" alt="">Toolbars template</a></li>
+                       </ul>
+                   </li>
+                   <li class="topmenu"><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/shopping_basket.png" alt="">Phim bộ</a></li>
+                   <li class="topmenu"><a href="https://css3menu.com/neoteric-dark-red.html#"><span><img src="./CSS menu creator_files/heart.png" alt="">Phim chiếu rạp</span></a>
+                       <ul>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/add.png" alt="">Android template</a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/add1.png" alt="">Mac template</a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><span><img src="./CSS menu creator_files/add2.png" alt="">Mercury template</span></a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/add3.png" alt="">Elegant template</a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><span><img src="./CSS menu creator_files/add4.png" alt="">Point template</span></a></li>
+                           <li><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/add5.png" alt="">Toolbars template</a></li>
+                       </ul>
+                   </li>
+                   <li class="topmenu"><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/shopping_basket.png" alt="">Phim mới</a></li>
+                   <li class="topmenu"><a href="https://css3menu.com/neoteric-dark-red.html#"><img src="./CSS menu creator_files/shopping_basket.png" alt="">Phim thuyết minh</a></li>
+               </ul>
+           </div>
+       </nav>
+
+       <c:if is="$route_name == 'home'">
+           <div class="black-block">
+               <c:include template="carousel" />
+           </div>
+       </c:if>
+
       <div class="container sub-main-header">
          <dl class="col">
             <!-- <dt></dt>
@@ -49,67 +138,12 @@
             <dd> {$ip_client}</dd>
          </dl>
       </div>
-   </header>
-   <nav class="w3-topnav w3-card-2 w3-slim topnav" id="nav">
-      <div class="container position">
-         <ul class="menu clear">
-             <li><a class="icon home" title="<?php echo Light_Application::APP?>" href="{$url_base}"></a></li>
-            <li style="width:80px;border-left:0">
-               <a>Thể loại</a>
-               <ul class="sub-menu">
-                  <c:each from="$category_cache" value="$category">
-                     <li class="prhd_li"><a href="{$category.link}" title="Phim {$category.title}">Phim {$category.title}</a></li>
-                  </c:each>
-               </ul>
-            </li>
-            <li style="width:85px">
-               <a>Quốc gia</a>
-               <ul class="sub-menu">
-                  <c:each from="$country_cache" value="$country">
-                     <li class="prhd_li"><a href="{$country.link}" title="Phim {$country.name}">Phim {$country.name}</a></li>
-                  </c:each>
-               </ul>
-            </li>
+   </div>
 
 
-            <li style="width:82px">
-               <a href="{$blocklinks.phim_moi}" title="Phim mới">Phim mới</a>
-               <ul class="sub-menu" style="width:105px">
-                  <li><a href="{$blocklinks.phim_2016}" title="Phim 2016">Phim 2016</a></li>
-                  <li><a href="{$blocklinks.phim_2015}" title="Phim 2015">Phim 2015</a></li>
-                  <li><a href="{$blocklinks.phim_2014}" title="Phim 2014">Phim 2014</a></li>
-                  <li><a href="{$blocklinks.phim_2013}" title="Phim 2013">Phim 2013</a></li>
-                  <li><a href="{$blocklinks.phim_2012}" title="Phim 2012">Phim 2012</a></li>
-                  <li><a href="{$blocklinks.phim_2011}" title="Phim 2011">Phim 2011</a></li>
-                  <li><a href="{$blocklinks.phim_2010}" title="Phim 2010">Phim 2010</a></li>
-               </ul>
-            </li>
-            <!--<li><a href="{$url_base}{$blocklinks.dien-vien}" title="Diễn viên">Diễn viên</a></li>-->
-            <li><a href="{$url_base}the-loai/phim-thuyet-minh/" title="Phim Thuyết Minh">Loạn luân</a>
-             <li><a href="{$url_base}the-loai/phim-thuyet-minh/" title="Phim Thuyết Minh">Hiếp dâm</a>
-             <li><a href="{$url_base}the-loai/phim-thuyet-minh/" title="Phim Thuyết Minh">Không che</a>
-             <li><a href="{$url_base}the-loai/phim-thuyet-minh/" title="Phim Thuyết Minh">Châu âu</a>
-             <li><a href="{$url_base}the-loai/phim-thuyet-minh/" title="Phim Thuyết Minh">Idol</a>
-            </li>
-<!--            <li>-->
-<!--               <div class="well-large">-->
-<!---->
-<!--                   <c:include template="lightbox" />-->
-<!---->
-<!--                   <a data-toggle="modal" href="#form-content" class="btn btn-primary btn-large">Yêu cầu phim</a>-->
-<!---->
-<!--               </div>-->
-<!---->
-<!--               </li>-->
-         </ul>
-         <div class="clear"></div>
-      </div>
-   </nav>
+
    <!--<div class="ad_location above_of_content container">{$ad_location.ad_above_of_content}</div>-->
    <c:if is="$route_name == 'home'">
-      <div class="black-block">
-         <c:include template="carousel" />
-      </div>
       <!--end.black-block-->
       <c:include template="list-film-wrapper" />
    </c:if>
