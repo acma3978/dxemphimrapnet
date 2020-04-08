@@ -1,10 +1,5 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
 
-<!--0.0.0.0 account.jetbrains.com-->
-<!--1.2.3.4 account.jetbrains.com-->
-<!--1.2.3.4 http://www.jetbrains.com-->
-<!--1.2.3.4 www-weighted.jetbrains.com-->
-
 <!-- BEGIN: carousel -->
 <c:if is="$route_name == 'home'">
 <!--   <div class="block-title-top">-->

@@ -66,14 +66,6 @@
 <!-- Custom and plugin javascript -->
 <div class="ad_location ad_float">{$ad_location.ad_float}</div>
 
-<!-- Custom and Main javascript -->
-<?php
-echo HTML::script('assets/js/jquery/jquery-3.4.1.min.js')
-    . HTML::script('assets/js/popper.min.js?v='.date('dmYhis'))
-    . HTML::script('assets/bootstrap/js/bootstrap.min.js?v='.date('dmYhis'))
-    . HTML::script('assets/js/app.js?v='.date('dmYhis'));
-?>
-
 </body>
 </html>
 <!-- END: footer -->
