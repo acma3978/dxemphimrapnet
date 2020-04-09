@@ -6,6 +6,7 @@ $(document).ready(function(e){
 });
 
 AppPack.TowrTE = function(){
+
     AppPack.yagZGaDUyagi.init();
 };
 
@@ -13,6 +14,7 @@ AppPack.yagZGaDUyagi = {
 
     init: function(){
         $(document).ready(function(e){
+
             AppPack.X2gUGHme.init();
 
             AppPack.B29PvB.v29Qv2DpkowAfoD5yapzGx();
@@ -790,14 +792,14 @@ AppPack.X2gUGHme = {
     init: function() {
 
         $(document).ready(function(e) {
-            AppPack.X2gUGHme.AutoComplete.init($('#search .keyword'));
+            AppPack.X2gUGHme.AutoComplete.init($('#f_search .keyword'));
             AppPack.X2gUGHme.registerSubmitEvent();
         });
     },
 
     registerSubmitEvent: function() {
 
-        var $search = $('#search');
+        var $search = $('#f_search');
 
         $search.submit(function(e) {
 
@@ -1341,7 +1343,7 @@ AppPack.X2gUGHme.AutoComplete.prototype.showResults = function(results) {
         this.$results = $('<ul id="msuggestions">')
             .css('z-index', 100)
             .addClass('autocomplete-list')
-            .appendTo($('#search'));
+            .appendTo($('#f_search'));
     }
 
     this.hideResults();
