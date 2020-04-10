@@ -9,7 +9,7 @@
                <div class="pt-3">
 
                    <c:if is="$route_name == 'home' || $route_name == 'watch'">
-                       <div id="logo" class="float-left col-md-3 position-relative"><a href="http://google.com" title="Để mai tính" title="Xem phim" id="f_alogo"><i id="f_logo" class="f_icon"></i></a></div>
+                       <div id="logo" class="float-left col-md-3 position-relative"><a href="{$url_base}" title="{$page_title}" id="f_alogo"><i id="f_logo" class="f_icon"></i></a></div>
                        <c:else />
                        <div id="logo"></div>
                    </c:if>
