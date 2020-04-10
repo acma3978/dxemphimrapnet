@@ -255,8 +255,6 @@ class Light_Application extends Light_Registry {
 
 	}
 
-	
-
 	/**
 
 	 * 
