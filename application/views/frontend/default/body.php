@@ -112,39 +112,39 @@
            </div>
        </c:if>
 
-      <div class="container sub-main-header">
-         <dl class="col">
-            <!-- <dt></dt>
-               <dd><span class="btn-sm btn btn-primary" title="Yêu cầu phim dành cho bạn">Yêu cầu phim</span></dd> -->
-            <c:if is="$route_name == 'film' || $route_name == 'watch'">
-               <dt>Tên: </dt>
-               <dd>Phim {$filminfo.title} |</dd>
-               <dt><i class="icon icon-op i-status"></i>Trạng thái:</dt>
-               <dd class="stepem">
-                  <c:if is="{$filminfo.check_trailer} != '1'">
-                     <c:else />
-                     Trailer
-                  </c:if>
-                  <c:if is="{$filminfo.check_trailer} != '1'">
-                     {$filminfo.status}
-                     <c:else />
-                     Trailer
-                  </c:if>
-               </dd>
-            </c:if>
-         </dl>
-         <dl class="col2">
-            <dt>IP: </dt>
-            <dd> {$ip_client}</dd>
-         </dl>
-      </div>
+<!--      <div class="container sub-main-header">-->
+<!--         <dl class="col">-->
+<!--            <dt></dt>-->
+<!--               <dd><span class="btn-sm btn btn-primary" title="Yêu cầu phim dành cho bạn">Yêu cầu phim</span></dd> -->
+<!--            <c:if is="$route_name == 'film' || $route_name == 'watch'">-->
+<!--               <dt>Tên: </dt>-->
+<!--               <dd>Phim {$filminfo.title} |</dd>-->
+<!--               <dt><i class="icon icon-op i-status"></i>Trạng thái:</dt>-->
+<!--               <dd class="stepem">-->
+<!--                  <c:if is="{$filminfo.check_trailer} != '1'">-->
+<!--                     <c:else />-->
+<!--                     Trailer-->
+<!--                  </c:if>-->
+<!--                  <c:if is="{$filminfo.check_trailer} != '1'">-->
+<!--                     {$filminfo.status}-->
+<!--                     <c:else />-->
+<!--                     Trailer-->
+<!--                  </c:if>-->
+<!--               </dd>-->
+<!--            </c:if>-->
+<!--         </dl>-->
+<!--         <dl class="col2">-->
+<!--            <dt>IP: </dt>-->
+<!--            <dd> {$ip_client}</dd>-->
+<!--         </dl>-->
+<!--      </div>-->
    </div>
 
-
+   <main class="body-wrap clearfix">
 
    <!--<div class="ad_location above_of_content container">{$ad_location.ad_above_of_content}</div>-->
    <c:if is="$route_name == 'home'">
       <!--end.black-block-->
-      <c:include template="list-film-wrapper" />
+      <c:include template="list-movies" />
    </c:if>
    <!-- END: body -->
