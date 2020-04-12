@@ -107,9 +107,7 @@
        </nav>
 
        <c:if is="$route_name == 'home'">
-           <div class="black-block">
-               <c:include template="carousel" />
-           </div>
+           <c:include template="carousel" />
        </c:if>
 
 <!--      <div class="container sub-main-header">-->

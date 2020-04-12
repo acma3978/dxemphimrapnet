@@ -1,9 +1,7 @@
 <?php defined('SYSPATH') or die('No direct access allowed.');
 
-if($_SERVER['HTTP_HOST'] != 'localhost')
-{
-	return array
-	(
+if($_SERVER['HTTP_HOST'] != 'localhost') {
+	return array(
 		'default' => array
 
 		(
@@ -23,8 +21,7 @@ if($_SERVER['HTTP_HOST'] != 'localhost')
 		),
 	);
 }
-return array
-(
+return array(
 	'default' => array
 	(
 		'type'       => 'mysqli',
@@ -41,4 +38,3 @@ return array
 		'profiling'    => TRUE,
 	),
 );
-
