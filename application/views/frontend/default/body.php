@@ -136,9 +136,6 @@
 <!--            <dd> {$ip_client}</dd>-->
 <!--         </dl>-->
 <!--      </div>-->
-   </div>
-
-   <main class="body-wrap clearfix">
 
    <!--<div class="ad_location above_of_content container">{$ad_location.ad_above_of_content}</div>-->
    <c:if is="$route_name == 'home'">

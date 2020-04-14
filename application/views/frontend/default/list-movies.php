@@ -2,6 +2,10 @@
 
 <!-- BEGIN: list-movies -->
 
+</div>
+
+<main class="body-wrap clearfix">
+
 <div id="f_movie_list">
     <div class="container">
         <div id="f_block_movie_list">
