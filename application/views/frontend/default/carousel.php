@@ -15,7 +15,7 @@
             <!-- The slideshow -->
             <div class="carousel-inner no-padding row">
                 <c:each from="{$phim_hot}" key="$key" value="$film">
-                    <div class="carousel-item <c:if is="$key == 0"> active <c:else /> </c:if>">
+                    <div class="carousel-item <c:if is="$key == 0">active <c:else /> </c:if>">
                     <c:each from="{$film}" key="$key" value="$value">
                         <div class="f_item">
                             <a href="{$value.link}" title="{$value.title}">

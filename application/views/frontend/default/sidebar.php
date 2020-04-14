@@ -8,174 +8,50 @@
         <div class="widget">
             <span class="title">Phim sắp chiếu/ Trailer</span>
             <div class="f_block">
-
-
-                <c:each from="{$top_phim_trailer.top}" key="$key" value="$film">
-
-                    <a class="list-item-with-thumb row" href="{$film.link}" title="{$film.title}">
-
-                        <div class=" outer" style="padding-bottom: 63%;">
-
-                            <div class="inner">
-
-                                <img class="img-responsive" title="{$film.title}" src="{$film.imagefan_thumb_url}" width="350px" alt="{$film.title}">
-
-                                <span>{$film.status}</span>
-
-                                <em class="number">1</em>
-
-                                <div class="description">
-
-                                    <h3 class="font-13"> {$film.title}</h3>
-
-                                    <h4 class="font-11">{$film.title_o}</h4>
-
-                                </div>
-
-                                <span class="icon-play">&nbsp;</span>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-
-
-
-
-                </c:each>
-
                 <ol class="f_item_film">
-                    <li>
-                        <div class="f_item_l">
-                            <div class="f_item_option">
-                                <i class="fas fa-volume-down" title="Thuyết minh"></i>
-                                <i class="fas fa-comment-dots" title="VietSub"></i>
-                            </div>
 
-
-                            <a href="http://google.com" title="Hảo hữu">
-                                <img src="data/images/su-menh-trai-tim-su-menh-trai-tim-2016-wall-thumb.jpg">
-
-                                <div class="info">
-                                    <div class="ng-binding ng-scope">
-                                        <span class="f_title_vn">Biệt Đội Bất Hảo</span><span class="f_title_en">The Bad Guys: Reign of Chaos (C18)</span>
-                                    </div>
+                    <c:each from="{$phim_trailer.top}" value="$film">
+                        <li>
+                            <div class="f_item_l">
+                                <div class="f_item_option">
+                                    <i class="fas fa-volume-down" title="Thuyết minh"></i>
+                                    <i class="fas fa-comment-dots" title="VietSub"></i>
                                 </div>
 
+                                <a href="{$film.link}" title="{$film.title}">
+                                    <img src="data/images/su-menh-trai-tim-su-menh-trai-tim-2016-wall-thumb.jpg">
+
+                                    <div class="info">
+                                        <div class="ng-binding ng-scope">
+                                            <span class="f_title_vn">{$film.title}</span><span class="f_title_en">{$film.title_o}</span>
+                                        </div>
+                                    </div>
+
+                                </a>
+                                <span class="ng-binding ageType">C18</span>
+                                <span class="avgPoint ng-scope">
+                                    <p class="txtPoint ng-binding">180 phút</p>
+                                </span>
+                            </div>
+                        </li>
+                    </c:each>
+                    <c:each from="{$phim_trailer.last}" key="$key" value="$film">
+                        <li>
+                            <a href="{$film.link}" title="{$film.title}" class="font name">
+                                <div class="f_thumb">
+                                    <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
+
+                                    <span class="label-range">{$key}</span>
+                                </div>
+                                <div class="f_detail">
+                                    <p>{$film.title}</p>{$film.title_o}
+                                </div>
                             </a>
-                            <span class="ng-binding ageType">C18</span>
-                            <span class="avgPoint ng-scope">
-                                                  <p class="txtPoint ng-binding">180 phút</p>
-                                                </span>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="phim-/_/xem-phim/" title="nắm" class="font name">
-                            <div class="f_thumb">
-                                <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-
-                                <span class="label-range">2</span>
-                            </div>
-                            <div class="f_detail">
-                                <p>Sút</p>Sut
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="phim-/_/xem-phim/" title="nắm" class="font name">
-                            <div class="f_thumb">
-                                <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                <span class="label-range">3</span>
-                            </div>
-                            <div class="f_detail">
-                                <p>Cuộc Chiến Chống Tham Nhũng Phần 2</p>Z Storm II
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="phim-/_/xem-phim/" title="nắm" class="font name">
-                            <div class="f_thumb">
-                                <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                <span class="label-range">4</span>
-                            </div>
-                            <div class="f_detail">
-                                <p>Cuộc Chiến Chống Tham Nhũng Phần 2</p>Z Storm II
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="phim-/_/xem-phim/" title="nắm" class="font name">
-                            <div class="f_thumb">
-                                <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                <span class="label-range">5</span>
-                            </div>
-                            <div class="f_detail">
-                                <p>Cuộc Chiến Chống Tham Nhũng Phần 2</p>Z Storm II
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="phim-/_/xem-phim/" title="nắm" class="font name">
-                            <div class="f_thumb">
-                                <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                <span class="label-range">6</span>
-                            </div>
-                            <div class="f_detail">
-                                <p>Cuộc Chiến Chống Tham Nhũng Phần 2</p>Z Storm II
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="phim-/_/xem-phim/" title="nắm" class="font name">
-                            <div class="f_thumb">
-                                <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                <span class="label-range">7</span>
-                            </div>
-                            <div class="f_detail">
-                                <p>Cuộc Chiến Chống Tham Nhũng Phần 2</p>Z Storm II
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="phim-/_/xem-phim/" title="nắm" class="font name">
-                            <div class="f_thumb">
-                                <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                <span class="label-range">8</span>
-                            </div>
-                            <div class="f_detail">
-                                <p>Cuộc Chiến Chống Tham Nhũng Phần 2</p>Z Storm II
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="phim-/_/xem-phim/" title="nắm" class="font name">
-                            <div class="f_thumb">
-                                <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                <span class="label-range">9</span>
-                            </div>
-                            <div class="f_detail">
-                                <p>Cuộc Chiến Chống Tham Nhũng Phần 2</p>Z Storm II
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="phim-/_/xem-phim/" title="nắm" class="font name">
-                            <div class="f_thumb">
-                                <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                <span class="label-range">10</span>
-                            </div>
-                            <div class="f_detail">
-                                <p>Cuộc Chiến Chống Tham Nhũng Phần 2</p>Z Storm II
-                            </div>
-                        </a>
-                    </li>
+                        </li>
+                    </c:each>
                 </ol>
+
+
             </div>
         </div>
         <div class="widget">

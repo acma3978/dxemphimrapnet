@@ -112,140 +112,19 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner no-padding row">
 
-                            <div class="carousel-item active">
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Triệu vy">
+                            <c:each from="{$filminfo.actors}" key="$key" value="$actors">
+                                <div class="carousel-item <c:if is="$key == 0">active <c:else /> </c:if>">
+                                    <c:each from="{$actors}" key="$key" value="$value">
 
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/trieu-vy.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Triệu vy</span>
-                                    </a>
+                                        <div class="f_item">
+                                            <a data-title="{$value.profile.title}" data-actorid="{$value.profile.actor_id}" href="{$value.link}" title="{$value.profile.title}">
+                                                <div class="f_filmthumb" style="background-image: url('./data/images/actors/ly-tieu-long.jpg'); width: 100%;height: 100%"></div>
+                                                <span class="f_title">{$value.profile.title}</span>
+                                            </a>
+                                        </div>
+                                    </c:each>
                                 </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Lâm tâm như">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/aaa.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Lâm tâm như</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Lý tiểu long">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/ly-tieu-long.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Lý tiểu long</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Lý liên kiệt">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/ly-lien-kiet.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Lý liên kiệt</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Thành long">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/jackie.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Thành long</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Trương vệ kiện">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/truong-ve-kien.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Trương vệ kiện</span>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="carousel-item">
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/ly-tieu-long.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/ly-lien-kiet.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/jackie.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/jackie.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/jackie.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/jackie.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/ly-tieu-long.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/ly-lien-kiet.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/jackie.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/jackie.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/jackie.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-                                <div class="f_item">
-                                    <a href="http://google.com" title="Để mai tính">
-
-                                        <div class="f_filmthumb" style="background-image: url('./data/images/actors/jackie.jpg'); width: 100%;height: 100%"></div>
-                                        <span class="f_title">Biệt Đội Bất Hảo</span>
-                                    </a>
-                                </div>
-
-                            </div>
+                            </c:each>
 
                         </div>
 
@@ -345,8 +224,7 @@
                             <c:else />
                             {$filminfo.title} trọn bộ, {$filminfo.title} Vietsub, {$filminfo.title} tập cuối, {$filminfo.title} Vietsub thuyết minh, {$filminfo.title} lồng tiếng, {$filminfo.title} Full hd, {$filminfo.title} bản đẹp, Hậu trường {$filminfo.title}, trailer {$filminfo.title}, {$filminfo.title} phụ đề Xem phim {$filminfo.title_o}, {$filminfo.title} {$filminfo.year}, {$filminfo.title} tập mới, {$filminfo.title} phần mới, {$filminfo.title} phụ đề, {$filminfo.title_o} {$filminfo.year}, {$filminfo.title} {$filminfo.country.name}, {$filminfo.title_o} {$filminfo.country.name}, , phim {$filminfo.title_o} {$filminfo.country.name}, {$filminfo.title_o} {$filminfo.country.name} {$filminfo.year}, {$filminfo.country.name} {$filminfo.year}, phim {$filminfo.country.name} năm {$filminfo.year}, {$filminfo.title} {$filminfo.status}
                             <c:if is="{$split_timeLine.split}">
-                                ,
-                                <c:each from="{$split_timeLine.split}" value="$timeline"> {$timeline}</c:each>
+                                ,<c:each from="{$split_timeLine.split}" value="$timeline"> {$timeline}</c:each>
                             </c:if>
                         </c:if>
                     </h4>
