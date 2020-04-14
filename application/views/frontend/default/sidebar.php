@@ -2,12 +2,50 @@
 
 <!-- BEGIN: sidebar -->
 
-<div class="f_block-right float-left ml-3">
+<div class="f_block-right float-left">
     <div class="block-item sidebar">
 
         <div class="widget">
             <span class="title">Phim sắp chiếu/ Trailer</span>
             <div class="f_block">
+
+
+                <c:each from="{$top_phim_trailer.top}" key="$key" value="$film">
+
+                    <a class="list-item-with-thumb row" href="{$film.link}" title="{$film.title}">
+
+                        <div class=" outer" style="padding-bottom: 63%;">
+
+                            <div class="inner">
+
+                                <img class="img-responsive" title="{$film.title}" src="{$film.imagefan_thumb_url}" width="350px" alt="{$film.title}">
+
+                                <span>{$film.status}</span>
+
+                                <em class="number">1</em>
+
+                                <div class="description">
+
+                                    <h3 class="font-13"> {$film.title}</h3>
+
+                                    <h4 class="font-11">{$film.title_o}</h4>
+
+                                </div>
+
+                                <span class="icon-play">&nbsp;</span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+
+
+                </c:each>
+
                 <ol class="f_item_film">
                     <li>
                         <div class="f_item_l">
