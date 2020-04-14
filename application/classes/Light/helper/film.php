@@ -106,30 +106,6 @@ class Light_Helper_Film {
 			}
 		}
 
-        // actors
-        if(!empty($parse_options['actors']) AND !empty($film['actors']) AND !empty($film['actors_ascii']))
-        {
-            $actors = array_combine(explode(',', $film['actors']), explode(',', $film['actors_ascii']));
-
-            $counter = 0;
-            $count_actors = count($actors);
-
-            $addition['actors_link'] = array();
-            
-            foreach($actors as $title => $title_ascii)
-            {
-
-				$profile = Light_Model::create('Light_Model_Actor')->get_actor_by_title($title_ascii);
-
-                $addition['actors_link'][$counter] = array(
-                    'profile'		=> $profile,
-						'link' 		=> Light_Link::build('actor', array('title_ascii' => $title_ascii,'actor_id' => $profile['actor_id'])),
-                    'is_last' 	=> $counter++ == $count_actors-1,
-                );
-           
-            }
-        }
-
         if($parse_options['select_fields']){
         	
         	$search = str_replace('film.', '', $parse_options['select_fields']);

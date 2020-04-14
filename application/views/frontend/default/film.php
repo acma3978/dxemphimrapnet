@@ -111,6 +111,7 @@
 
                         <!-- The slideshow -->
                         <div class="carousel-inner no-padding row">
+
                             <div class="carousel-item active">
                                 <div class="f_item">
                                     <a href="http://google.com" title="Triệu vy">
@@ -245,6 +246,7 @@
                                 </div>
 
                             </div>
+
                         </div>
 
                         <!-- Left and right controls -->
