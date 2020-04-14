@@ -78,17 +78,18 @@
                     <div class="clearfix bg-profile-film">
                         <dl class="col row"><dt>
                                 <i class="f_icon dd-icon i-director"></i>Đạo diễn: </dt>
-                            <dd class="f_ellipsis"><c:if is="{$filminfo.director}!='NULL'">{$filminfo.director}<c:else />(Đang cập nhật)</c:if></dd>
+                            <dd class="f_ellipsis" style="width: 137px"><c:if is="{$filminfo.director} != ''">{$filminfo.director}<c:else />(Đang cập nhật)</c:if></dd>
                             <dt class="f_ellipsis"><i class="f_icon dd-icon i-status"></i>Trạng thái:</dt>
-                            <dd style="color:red" class="f_ellipsis"><c:if is="{$filminfo.status}!='NULL'">{$filminfo.status}<c:else />(Đang cập nhật)</c:if></dd>
-                            <dt><i class="f_icon dd-icon i-views"></i>Lượt xem:</dt>
-                            <dd>1500</dd>
-                        </dl>
-                        <dl class="col row">
+                            <dd style="color:red" class="f_ellipsis"><c:if is="{$filminfo.status} != ''">{$filminfo.status}<c:else />(Đang cập nhật)</c:if></dd>
                             <dt><i class="f_icon dd-icon i-time"></i>Thời lượng:</dt>
                             <dd style="color:red;font-weight: bold">50 phút</dd>
+                        </dl>
+                        <dl class="col row">
+
                             <dt><i class="f_icon dd-icon i-quality"></i> Chất lượng:</dt>
                             <dd>1280p</dd>
+                            <dt><i class="f_icon dd-icon i-country"></i> Quốc gia:</dt>
+                            <dd style="width: 137px"><a href="{$filminfo.country.link}" title="Phim {$filminfo.country.name}"> {$filminfo.country.name}</a></dd>
                             <dt><i class="f_icon dd-icon i-medias"></i>Tập mới:</dt>
                             <dd class="f_ellipsis">1280p</dd>
 
@@ -96,9 +97,10 @@
 
                         <dl class="col">
                             <dt><i class="f_icon dd-icon i-comingsoon"></i>Sắp chiếu:</dt>
-                            <dd style="color:red;font-weight: bold" class="f_ellipsis" title="<c:if is="{$filminfo.comingsoon}!='NULL' || {$filminfo.comingsoon}!=''">{$filminfo.comingsoon}<c:else />N/A</c:if>"><c:if is="{$filminfo.comingsoon}!='NULL' || {$filminfo.comingsoon}!=''">{$filminfo.comingsoon}<c:else />N/A</c:if></dd>
-                            <dt><i class="f_icon dd-icon i-country"></i> Quốc gia:</dt>
-                            <dd><a href="{$filminfo.country.link}" title="Phim {$filminfo.country.name}"> {$filminfo.country.name}</a></dd>
+                            <dd style="color:red;font-weight: bold" class="f_ellipsis" title="<c:if is="{$filminfo.comingsoon}!=''">{$filminfo.comingsoon}<c:else />N/A</c:if>"><c:if is="{$filminfo.comingsoon}!=''">{$filminfo.comingsoon}<c:else />N/A</c:if></dd>
+
+                            <dt><i class="f_icon dd-icon i-views"></i>Lượt xem:</dt>
+                            <dd>1500</dd>
                         </dl>
                     </div>
                 </div>

@@ -42,7 +42,7 @@ class Controller_Frontend_Watch extends Controller_Frontend {
 		
 		$filminfo = Light_Helper_Film::parse($filminfo, array('tags' => TRUE));
 
-		 $info_youtube=Light_Application::_youtube('Film '.$filminfo['title_o'],', Phim '.$filminfo['title'],'4','watch');
+		 //$info_youtube=Light_Application::_youtube('Film '.$filminfo['title_o'],', Phim '.$filminfo['title'],'4','watch');
 
 		$filminfo['is_newtab'] = !empty($episode_id);
 
@@ -88,70 +88,13 @@ class Controller_Frontend_Watch extends Controller_Frontend {
             }
 		}
 
-		$youtube_decode = self::_combinPass($youtube_id,'decode');
 
-        //$filminfo[tags_link] = Light_Helper_String::rand_array($filminfo[tags_link]);
-
-		// Nếu ko tồn tại tập theo link request thì nhảy về link đầu
-
-        if(empty($episodes[$episode_id]) and empty($filminfo['check_trailer'])){
-
-            $this->redirect($filminfo['link_watch']);
-        }
-
-		$filminfo['episode'] = $episodes[$episode_id];
-
-        if(!in_array($country,Light_Config::get('config.censor.country_filter'))){
-
-			$video_url=$filminfo["trailer_url"];
-		}else{
-
-			if(!is_int($youtube_decode)){
-
-				$video_url = $filminfo['episode']['video_url'] = 'http://youtube.com/watch?v='.$youtube_decode;
-
-			}else{
-	
-				$video_url = $filminfo['check_trailer']==1 ? $filminfo['trailer_url']:$filminfo['episode']['video_url'];
-			}
-		}
-
-		//sao nó không chạy nhỉ?
-
-        $data = Light_Grab::process($film_id,$episode_id,$video_url,$_SERVER['HTTP_HOST']);
-		//check time o? day no load bao nhiêu
-
-        $embed = json_decode($data,true);
-
-        $this->_jwplayer_setup["film"] = array(
-            "film_id"=> $film_id,
-            "episode_id"=> $episode_id
-        );
-
-        $this->_jwplayer_setup["logo"] = array(
-            "file"=>URL::base()."player/logo/logo.png"
-        );
-
-        if(!$embed[0]['embed']){
-       		$this->_jwplayer_setup["playlist"] = URL::base()."players/$film_id/$episode_id.rss";
-			$filminfo['setup_jwplayer'] = json_encode($this->_jwplayer_setup);
-        }else{
-			$filminfo['setup_jwplayer'] = FALSE;
-			$filminfo['embed'] = $embed[0]['link'];
-
-        }
-
-
-		// fix for facebook comment
-		$filminfo['link'] = Light_Link::film('film', $filminfo, NULL, TRUE, TRUE);
-		//$filminfo['link_fbcomment'] = Light_Link::film('module', 'action=fbcomment', 'film_id=' . $film_id, TRUE, TRUE);
-        $user_id = $this->_input->filter_single('user_id', Light_Input::UINT);
   
 		$view_params = array(
 			'filminfo' 		=> $filminfo,
 			'episode_id'=>	$episode_id,
             'admin' 		=> Light_Visitor::instance()->group_id,
-            'info_youtube'=>   $info_youtube,
+
 			'url_canonical' => $url_canonical,
 			'episode_cache' => $episode_cache,
 			'server_cache'	=> $server_cache,
@@ -170,7 +113,7 @@ class Controller_Frontend_Watch extends Controller_Frontend {
         if(!empty($filminfo['check_trailer'])){
             $view_params += array(
                 'page_title' => "Xem Phim $filminfo[title] ".$status,
-                'page_keywords' => $filminfo[title].' '.$status.', '.$keywords,
+                'page_keywords' => $filminfo['title'].' '.$status.', '.$keywords,
                 'page_description' => "$filminfo[title]. ".$status.", $filminfo[title_o] " . $filminfo['description'],
             );
         }
