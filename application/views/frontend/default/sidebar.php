@@ -60,82 +60,145 @@
             <div class="f_block float-left f_itemf">
                 <ul class="nav" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="day-tab" data-toggle="tab" href="#day" role="tab" aria-controls="day" aria-selected="true">Ngày</a>
+                        <a class="nav-link active" id="le-day-tab" data-toggle="tab" href="#le-day" role="tab" aria-controls="le-day" aria-selected="true">Ngày</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="week-tab" data-toggle="tab" href="#week" role="tab" aria-controls="week" aria-selected="false">Tuần</a>
+                        <a class="nav-link" id="le-week-tab" data-toggle="tab" href="#le-week" role="tab" aria-controls="le-week" aria-selected="false">Tuần</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="month-tab" data-toggle="tab" href="#month" role="tab" aria-controls="month" aria-selected="false">Tháng</a>
+                        <a class="nav-link" id="le-month-tab" data-toggle="tab" href="#le-month" role="tab" aria-controls="le-month" aria-selected="false">Tháng</a>
                     </li>
                 </ul>
 
             </div>
             <div class="float-left tab-content">
-                <div class="tab-pane fade show active" id="day" role="tabpanel" aria-labelledby="day-tab">
+                <div class="tab-pane fade show active" id="le-day" role="tabpanel" aria-labelledby="le-day-tab">
+
                     <ol class="f_item_film">
-                        <li>
-                            <a href="phim-/_/xem-phim/" title="dsadsd" class="font name">
-                                <div class="f_thumb">
-                                    <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                </div>
-                                <div class="f_detail">
-                                    <p>Sút</p>Sut
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="phim-/_/xem-phim/" title="dsadsd" class="font name">
-                                <div class="f_thumb">
-                                    <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                </div>
-                                <div class="f_detail">
-                                    <p>Sút</p>Sut
-                                </div>
-                            </a>
-                        </li>
+                        <c:each from="{$top_le_views_day}" value="$film">
+                            <li>
+                                <a href="{$film.link}" title="{$film.title}" class="font name">
+                                    <div class="f_thumb">
+                                        <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="{$film.title}">
+                                    </div>
+                                    <div class="f_detail">
+                                        <p>{$film.title}</p>{$film.title_o}
+                                    </div>
+                                </a>
+                            </li>
+                        </c:each>
+                    </ol>
 
-                        <li>
-                            <a href="phim-/_/xem-phim/" title="dsadsd" class="font name">
-                                <div class="f_thumb">
-                                    <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                </div>
-                                <div class="f_detail">
-                                    <p>Sút</p>Sut
-                                </div>
-                            </a>
-                        </li>
+                </div>
 
-                        <li>
-                            <a href="phim-/_/xem-phim/" title="dsadsd" class="font name">
-                                <div class="f_thumb">
-                                    <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                </div>
-                                <div class="f_detail">
-                                    <p>Sút</p>Sut
-                                </div>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="phim-/_/xem-phim/" title="dsadsd" class="font name">
-                                <div class="f_thumb">
-                                    <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="Sut">
-                                </div>
-                                <div class="f_detail">
-                                    <p>Sút</p>Sut
-                                </div>
-                            </a>
-                        </li>
-
+                <div class="tab-pane fade" id="le-week" role="tabpanel" aria-labelledby="le-week-tab">
+                    <ol class="f_item_film">
+                        <c:each from="{$top_le_views_week}" value="$film">
+                            <li>
+                                <a href="{$film.link}" title="{$film.title}" class="font name">
+                                    <div class="f_thumb">
+                                        <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="{$film.title}">
+                                    </div>
+                                    <div class="f_detail">
+                                        <p>{$film.title}</p>{$film.title_o}
+                                    </div>
+                                </a>
+                            </li>
+                        </c:each>
                     </ol>
                 </div>
-                <div class="tab-pane fade" id="week" role="tabpanel" aria-labelledby="week-tab">ccc</div>
-                <div class="tab-pane fade" id="month" role="tabpanel" aria-labelledby="month-tab">bbb</div>
+
+                <div class="tab-pane fade" id="le-month" role="tabpanel" aria-labelledby="le-month-tab">
+                    <ol class="f_item_film">
+                        <c:each from="{$top_le_views_month}" value="$film">
+                            <li>
+                                <a href="{$film.link}" title="{$film.title}" class="font name">
+                                    <div class="f_thumb">
+                                        <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="{$film.title}">
+                                    </div>
+                                    <div class="f_detail">
+                                        <p>{$film.title}</p>{$film.title_o}
+                                    </div>
+                                </a>
+                            </li>
+                        </c:each>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="widget">
+
+            <span class="title float-left">Phim bộ</span>
+            <div class="f_block float-left f_itemf">
+                <ul class="nav" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="bo-day-tab" data-toggle="tab" href="#bo-day" role="tab" aria-controls="bo-day" aria-selected="true">Ngày</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bo-week-tab" data-toggle="tab" href="#bo-week" role="tab" aria-controls="bo-week" aria-selected="false">Tuần</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bo-month-tab" data-toggle="tab" href="#bo-month" role="tab" aria-controls="bo-month" aria-selected="false">Tháng</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="float-left tab-content">
+                <div class="tab-pane fade show active" id="bo-day" role="tabpanel" aria-labelledby="bo-day-tab">
+
+                    <ol class="f_item_film">
+                        <c:each from="{$top_bo_views_day}" value="$film">
+                            <li>
+                                <a href="{$film.link}" title="{$film.title}" class="font name">
+                                    <div class="f_thumb">
+                                        <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="{$film.title}">
+                                    </div>
+                                    <div class="f_detail">
+                                        <p>{$film.title}</p>{$film.title_o}
+                                    </div>
+                                </a>
+                            </li>
+                        </c:each>
+                    </ol>
+
+                </div>
+                <div class="tab-pane fade" id="bo-week" role="tabpanel" aria-labelledby="bo-week-tab">
+                    <ol class="f_item_film">
+                        <c:each from="{$top_bo_views_week}" value="$film">
+                            <li>
+                                <a href="{$film.link}" title="{$film.title}" class="font name">
+                                    <div class="f_thumb">
+                                        <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="{$film.title}">
+                                    </div>
+                                    <div class="f_detail">
+                                        <p>{$film.title}</p>{$film.title_o}
+                                    </div>
+                                </a>
+                            </li>
+                        </c:each>
+                    </ol>
+                </div>
+                <div class="tab-pane fade" id="bo-month" role="tabpanel" aria-labelledby="bo-month-tab">
+                    <ol class="f_item_film">
+                        <c:each from="{$top_bo_views_month}" value="$film">
+                            <li>
+                                <a href="{$film.link}" title="{$film.title}" class="font name">
+                                    <div class="f_thumb">
+                                        <img src="data/images/phim-pha-an-trung-quoc-2.png" alt="{$film.title}">
+                                    </div>
+                                    <div class="f_detail">
+                                        <p>{$film.title}</p>{$film.title_o}
+                                    </div>
+                                </a>
+                            </li>
+                        </c:each>
+                    </ol>
+                </div>
             </div>
             <div class="clearfix"></div>
         </div>
-
     </div>
 </div>
 <!-- END: sidebar -->
